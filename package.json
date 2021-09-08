@@ -1,0 +1,32 @@
+{
+  "name": "igemoya-supervisor",
+  "version": "1.0.0",
+  "description": "이게모야 관리자페이지",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "auto-build": "tsc-watch",
+    "start": "supervisor dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igemoya/igemoya-supervisor.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/igemoya/igemoya-supervisor/issues"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "typescript": "^4.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^16.7.13",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
+    "eslint": "^7.32.0",
+    "supervisor": "^0.12.0",
+    "tsc-watch": "^4.5.0"
+  }
+}
