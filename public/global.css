@@ -1,0 +1,8 @@
+:global(body) {
+  padding: 0;
+  margin: 0;
+}
+
+.w900 {
+  font-weight: 900;
+}

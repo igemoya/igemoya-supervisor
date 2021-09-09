@@ -1,55 +1,77 @@
 <script lang="ts">
+  import "../@type/index.d.ts";
+  
+  Kakao.init("f246de8d71e0c8320cb967a7361ae9fe");
+
+  const loginWithKakao = () => {
+    Kakao.Auth.authorize({
+      redirectUri: 'http://localhost:3000/'
+    });
+  };
+
+  const getCookie = (name) => {
+    const value = "; " + document.cookie;
+    const parts = value.split("; " + name + "=");
+    if (parts.length === 2) return parts.pop().split(";").shift();
+  };
+
+  const displayToken = () => {
+    const token = getCookie('authorize-access-token');
+    if(token) {
+      Kakao.Auth.setAccessToken(token);
+      Kakao.Auth.getStatusInfo(({ status }) => {
+        if(status === 'connected') {
+          alert('login success. token: ' + Kakao.Auth.getAccessToken());
+        } else {
+          Kakao.Auth.setAccessToken(null);
+        }
+      })
+    }
+  };
+  displayToken();
 </script>
 
 <main>
-  <h1>Hello Typescript!</h1>
-
-  <p>
-    Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
-    apps.
-  </p>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme">SvelteKit</a> for
-    the officially supported framework, also powered by Vite!
-  </p>
+  <img src="/assets/igemoya.svg" alt="igemoya" id="logo">
+  <span id="logoText"><span class="w900">이게모야</span>&nbsp;관리자</span>
+  <a id="kakaoButton" on:click={loginWithKakao}>
+    <img src="/assets/kakao_login.png" id="kakao" alt="Kakao Login"/>
+  </a>
+  <p>본 페이지에 "카카오 로그인"을 진행함으로써<br>서비스의 이용약관과 개인정보처리방침에 동의하는 것으로 간주합니다.</p>
 </main>
 
 <style>
-  :root {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-
   main {
-    text-align: center;
-    padding: 1em;
-    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 100;
-    line-height: 1.1;
-    margin: 2rem auto;
-    max-width: 14rem;
+  #logo {
+    width: 5vw;
+  }
+
+  #logoText {
+    margin-top: 1vh;
+    font-size: 2.5vh;
+    color: #007CFB;
+  }
+
+  #kakaoButton {
+    cursor: pointer;
+    margin-top: 10vh;
+  }
+
+  #kakao {
+    width: 10vw;
   }
 
   p {
-    max-width: 14rem;
-    margin: 1rem auto;
-    line-height: 1.35;
-  }
-
-  @media (min-width: 480px) {
-    h1 {
-      max-width: none;
-    }
-
-    p {
-      max-width: none;
-    }
+    text-align: center;
+    color: #DBDBDB;
+    font-size: 1.5vh;
   }
 </style>
