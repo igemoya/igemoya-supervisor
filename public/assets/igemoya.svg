@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="98" height="99" viewBox="0 0 98 99">
+  <g id="igemoya" transform="translate(-3356 -799)">
+    <g id="그룹_8379" data-name="그룹 8379" transform="translate(-15.5 -17.86)">
+      <ellipse id="타원_10" data-name="타원 10" cx="24" cy="24.5" rx="24" ry="24.5" transform="translate(3420.5 866.86)" fill="#007cfb"/>
+      <rect id="사각형_407" data-name="사각형 407" width="47" height="49" rx="10" transform="translate(3371.5 866.86)" fill="#007cfb"/>
+      <g id="그룹_8380" data-name="그룹 8380" transform="translate(3419.883 816.92)">
+        <g id="사각형_406" data-name="사각형 406" transform="translate(-0.383 -0.059)" fill="#fff" stroke="#007cfb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          <rect width="50" height="49" rx="10" stroke="none"/>
+          <rect x="1" y="1" width="48" height="47" rx="9" fill="none"/>
+        </g>
+        <path id="패스_8037" data-name="패스 8037" d="M6.913,1.024,40.208,0c3.687,0,8.834,6.086,8.834,9.772L48,41.166c0,3.687-2.864,4.1-2.983,3.935C31.17,31.523,27.11,27.5,2.179,4.433A5.017,5.017,0,0,1,6.913,1.024Z" transform="translate(0.267 0.316)" fill="#007cfb"/>
+      </g>
+      <circle id="타원_11" data-name="타원 11" cx="23.5" cy="23.5" r="23.5" transform="translate(3371.5 817.86)" fill="#007cfb"/>
+      <g id="그룹_8385" data-name="그룹 8385" transform="translate(3432.999 879.859)">
+        <rect id="사각형_390" data-name="사각형 390" width="4.452" height="23.002" rx="2.226" transform="translate(9.275)" fill="#fff"/>
+        <rect id="사각형_391" data-name="사각형 391" width="23.002" height="4.452" rx="2.226" transform="translate(0 9.275)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
