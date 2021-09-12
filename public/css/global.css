@@ -18,6 +18,34 @@ body {
   font-weight: 900;
 }
 
+.w800 {
+  font-weight: 800;
+}
+
 .w700 {
   font-weight: 700;
+}
+
+.w600 {
+  font-weight: 600;
+}
+
+.w500 {
+  font-weight: 500;
+}
+
+.w400 {
+  font-weight: 400;
+}
+
+.w300 {
+  font-weight: 300;
+}
+
+.w200 {
+  font-weight: 200;
+}
+
+.w100 {
+  font-weight: 100;
 }

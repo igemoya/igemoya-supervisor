@@ -6,3 +6,59 @@ main {
   flex-direction: column;
   align-items: center;
 }
+
+#topContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5vh;
+  width: 92vw;
+}
+
+.topContainerSpliter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 45vw;
+  height: 50vh;
+}
+
+#topContainerTitleRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.containerTitle {
+  font-weight: 700;
+  font-size: 3vh;
+}
+
+small {
+  margin-bottom: 2px;
+  margin-left: 4px;
+}
+
+.topContainerRanking {
+  color: #bdbdbd;
+  padding: 2vh 2vw;
+  margin-top: 2vh;
+  border-radius: 1vh;
+  background-color: #fff;
+  border: 1px solid #bdbdbd;
+  width: calc(100% - 4vw);
+  height: 100%;
+}
+
+.topContainerRankingCategory {
+  font-size: 2vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1vh;
+  border-bottom: 1px solid #bdbdbd;
+}
