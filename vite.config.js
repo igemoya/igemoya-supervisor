@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [svelte()],
   server: {
     host: "0.0.0.0",
-    port: 80,
+    port: process.env.port || 80,
   },
 });
