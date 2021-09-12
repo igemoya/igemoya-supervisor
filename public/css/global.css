@@ -10,6 +10,14 @@ body {
   cursor: pointer;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 .w900 {
   font-weight: 900;
+}
+
+.w700 {
+  font-weight: 700;
 }

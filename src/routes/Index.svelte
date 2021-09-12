@@ -20,5 +20,6 @@
   <a id="kakaoButton" on:click={loginWithKakao}>
     <img src="/images/kakao_login.png" id="kakao" alt="Kakao Login"/>
   </a>
-  <p>본 페이지에 "카카오 로그인"을 진행함으로써<br>서비스의 이용약관과 개인정보처리방침에 동의하는 것으로 간주합니다.</p>
+  <p>본 서비스는 <span class="w700">카카오 로그인</span>을 통해 사용자를 식별합니다.<br>
+    로그인 시 <span class="w700">이게모야</span>의 <span class="w700 underline">이용약관</span>과 <span class="w700 underline">개인정보처리방침</span>에 동의하는 것으로 간주됩니다.</p>
 </main>
