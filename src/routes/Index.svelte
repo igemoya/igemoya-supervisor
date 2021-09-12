@@ -9,30 +9,9 @@
 
   const loginWithKakao = () => {
     Kakao.Auth.authorize({
-      redirectUri: 'http://localhost:3000/'
+      redirectUri: 'https://igemoya-supervisor.herokuapp.com/oauth'
     });
   };
-
-  const getCookie = (name) => {
-    const value = "; " + document.cookie;
-    const parts = value.split("; " + name + "=");
-    if (parts.length === 2) return parts.pop().split(";").shift();
-  };
-
-  const displayToken = () => {
-    const token = getCookie('authorize-access-token');
-    if(token) {
-      Kakao.Auth.setAccessToken(token);
-      Kakao.Auth.getStatusInfo(({ status }) => {
-        if(status === 'connected') {
-          alert('login success. token: ' + Kakao.Auth.getAccessToken());
-        } else {
-          Kakao.Auth.setAccessToken(null);
-        }
-      })
-    }
-  };
-  displayToken();
 </script>
 
 <main>
