@@ -26,9 +26,9 @@
 <div id="main">
   <div id="left" class="spliter">
     {#if previousUrl}
-      <a href={previousUrl}>
+      <Link to={previousUrl} id="prevButton">
         <img src="icons/back_arrow.svg" id="leftArrow" alt="<">&nbsp;{previousMenu}
-      </a>
+      </Link>
     {/if}
   </div>
   <div id="center" class="spliter">

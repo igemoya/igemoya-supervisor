@@ -1,10 +1,13 @@
 main {
   background-color: #f8f8f8;
-  width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.containers {
+  margin-top: 5vh;
+  width: 92vw;
 }
 
 #topContainer {
@@ -12,8 +15,6 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: 5vh;
-  width: 92vw;
 }
 
 .topContainerSpliter {
@@ -61,4 +62,32 @@ small {
   justify-content: space-between;
   padding-bottom: 1vh;
   border-bottom: 1px solid #bdbdbd;
+}
+
+.bottomContainers {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.wrapContainer {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+}
+
+.addContainer {
+  color: #4584d6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  margin-top: 2vh;
+  margin-left: 0.6vw;
+  margin-right: 0.6vw;
+  border-radius: 1vh;
+  width: 29vw;
+  height: 10vw;
+  border: 1px solid #bdbdbd;
 }

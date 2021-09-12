@@ -6,6 +6,8 @@
   import Navbar from "../../components/Navbar.svelte";
   import ViewRank from "../../components/ViewRank.svelte";
   import ThemeRank from "../../components/ThemeRank.svelte";
+  import ThemeElement from "../../components/ThemeElement.svelte";
+  import ExhibitionElement from "../../components/ExhibitionElement.svelte";
   let previousMenu = "";
   let previousUrl = "";
   let userName = "coupydev";
@@ -22,11 +24,20 @@
     {"theme": "현판의 비밀", "view": 173},
     {"theme": "숨겨진 보물, 경기전", "view": 31},
   ];
+  let exhibitions = [
+    {"id": "1", "exhibition": "경복궁", "image": "https://i1.wp.com/www.agoda.com/wp-content/uploads/2019/05/Gyeongbokgung-palace-Seoul-Gwanghwamun-Gate.jpg"},
+    {"id": "2", "exhibition": "경기전", "image": "https://t1.daumcdn.net/cfile/tistory/24434E3F5624A3FE10"},
+  ];
+  let themes = [
+    {"id": "1", "theme": "경복궁 깊게 들여다보기", "image": "https://lh3.googleusercontent.com/proxy/snK6mQGEnMyRGMYmZ0-q3bPCJ1fMP2MGH2JSCe2USi__b3i_5AKiMCjCm1dIHfnkFP8R_S_9YslZl2X970d7EXUBKLV6k55VwJa2RAMmBsSpLfJEMPrJKCkGGfuXXJuk5ibwIF1YDWgeJt4n"},
+    {"id": "2", "theme": "숨겨진 보물, 경기전", "image": "https://www.jeonju.go.kr/images/munhwa/sub/03010102_img02.jpg"},
+    {"id": "3", "theme": "현판의 비밀", "image": "https://img.hani.co.kr/imgdb/resize/2018/1227/00503307_20181227.JPG"},
+  ];
 </script>
 
 <main>
   <Navbar {previousMenu} {previousUrl} {userName} />
-  <div id="topContainer">
+  <div id="topContainer" class="containers">
     <div class="topContainerSpliter">
       <div id="topContainerTitleRow">
         <span class="containerTitle">실시간 조회 현황</span>
@@ -52,6 +63,32 @@
         {#each themeRanks as rank}
           <ThemeRank theme={rank.theme} view={rank.view} />
         {/each}
+      </div>
+    </div>
+  </div>
+  <div class="containers bottomContainers">
+    <span class="containerTitle">전시 목록</span>
+    <div class="wrapContainer">
+      {#each exhibitions as element}
+        <ExhibitionElement title={element.exhibition} imageUrl={element.image} id={element.id} />
+      {/each}
+      <div class="addContainer clickable">
+        <span class="addText w700">
+          새 전시 추가 +
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="containers bottomContainers">
+    <span class="containerTitle">테마 목록</span>
+    <div class="wrapContainer">
+      {#each themes as element}
+        <ThemeElement title={element.theme} imageUrl={element.image} id={element.id} />
+      {/each}
+      <div class="addContainer clickable">
+        <span class="addText w700">
+          새 테마마 추가 +
+        </span>
       </div>
     </div>
   </div>
