@@ -29,7 +29,7 @@
     {"id": "2", "exhibition": "경기전", "image": "https://t1.daumcdn.net/cfile/tistory/24434E3F5624A3FE10"},
   ];
   let themes = [
-    {"id": "1", "theme": "경복궁 깊게 들여다보기", "image": "https://lh3.googleusercontent.com/proxy/snK6mQGEnMyRGMYmZ0-q3bPCJ1fMP2MGH2JSCe2USi__b3i_5AKiMCjCm1dIHfnkFP8R_S_9YslZl2X970d7EXUBKLV6k55VwJa2RAMmBsSpLfJEMPrJKCkGGfuXXJuk5ibwIF1YDWgeJt4n"},
+    {"id": "1", "theme": "경복궁 깊게 들여다보기", "image": "http://www.sangjomagazine.com/imgdata/sangjomagazine_com/202009/2020092936542609.jpg"},
     {"id": "2", "theme": "숨겨진 보물, 경기전", "image": "https://www.jeonju.go.kr/images/munhwa/sub/03010102_img02.jpg"},
     {"id": "3", "theme": "현판의 비밀", "image": "https://img.hani.co.kr/imgdb/resize/2018/1227/00503307_20181227.JPG"},
   ];

@@ -39,6 +39,7 @@
     width: 100%;
     height: 100%;
     backdrop-filter: brightness(0.8) blur(8px);
+    -webkit-backdrop-filter: brightness(0.8) blur(8px);
     border-radius: 1vh;
   }
 </style>
