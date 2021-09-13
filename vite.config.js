@@ -6,5 +6,8 @@ export default defineConfig({
   plugins: [svelte()],
   server: {
     port: process.env.PORT || 80,
+    hmr: {
+      port: 433,
+    },
   },
 });
