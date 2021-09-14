@@ -3,14 +3,18 @@
 </svelte:head>
 
 <script lang="ts">
+  import { navigate } from "svelte-routing";
+
   import Navbar from "../../components/Navbar.svelte";
   import ViewRank from "../../components/ViewRank.svelte";
   import ThemeRank from "../../components/ThemeRank.svelte";
   import ThemeElement from "../../components/ThemeElement.svelte";
   import ExhibitionElement from "../../components/ExhibitionElement.svelte";
+  import axios from "axios";
+
   let previousMenu = "";
   let previousUrl = "";
-  let userName = "coupydev";
+  let userName = "";
   let viewRanks = [
     {"exhibition": "경복궁", "item": "광화문", "object": "현판", "view": 382},
     {"exhibition": "경복궁", "item": "광화문", "object": "용마루", "view": 316},
@@ -33,6 +37,16 @@
     {"id": "2", "theme": "숨겨진 보물, 경기전", "image": "https://www.jeonju.go.kr/images/munhwa/sub/03010102_img02.jpg"},
     {"id": "3", "theme": "현판의 비밀", "image": "https://img.hani.co.kr/imgdb/resize/2018/1227/00503307_20181227.JPG"},
   ];
+
+  axios.get('https://igemoya-backend.herokuapp.com/user/me', {
+    headers: {
+      authorization: `Bearer ${localStorage.jwt}`
+    }
+  }).then((res) => {
+    userName = res.data.username;
+  }).catch(() => {
+    navigate('/oauth/logout', { replace: true });
+  });
 </script>
 
 <main>

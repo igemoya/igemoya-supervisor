@@ -42,5 +42,5 @@
   </div>
 </div>
 <div id="floating" class="closed">
-  <Link to="/">로그아웃</Link>
+  <Link to="/oauth/logout">로그아웃</Link>
 </div>
