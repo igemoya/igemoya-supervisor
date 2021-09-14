@@ -83,8 +83,8 @@
   <div class="containers bottomContainers">
     <span class="containerTitle">전시 목록</span>
     <div class="wrapContainer">
-      {#each exhibitions as element}
-        <ExhibitionElement title={element.exhibition} imageUrl={element.image} id={element.id} />
+      {#each exhibitions as element, i}
+        <ExhibitionElement title={element.exhibition} imageUrl={element.image} id={element.id} isThird={(i + 1) % 3 == 0} />
       {/each}
       <div class="addContainer clickable">
         <span class="addText w700">
@@ -96,12 +96,12 @@
   <div class="containers bottomContainers">
     <span class="containerTitle">테마 목록</span>
     <div class="wrapContainer">
-      {#each themes as element}
-        <ThemeElement title={element.theme} imageUrl={element.image} id={element.id} />
+      {#each themes as element, i}
+        <ThemeElement title={element.theme} imageUrl={element.image} id={element.id} isThird={(i + 1) % 3 == 0} />
       {/each}
       <div class="addContainer clickable">
         <span class="addText w700">
-          새 테마마 추가 +
+          새 테마 추가 +
         </span>
       </div>
     </div>

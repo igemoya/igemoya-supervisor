@@ -4,6 +4,7 @@
   export let title: string;
   export let imageUrl: string;
   export let id: string;
+  export let isThird: boolean;
 
   const clicked = () => {
     localStorage.setItem("theme", id);
@@ -11,22 +12,29 @@
 </script>
 
 <Link to="/supervisor/theme" on:click={clicked} style="text-decoration: none">
-  <div style="background-image: url({imageUrl})" id="backgroundContainer">
+  {#if isThird}
+  <div style="background-image: url({imageUrl}); margin-right: 0;" class="themeContainer">
     <div id="innerContainer">
       <span class="w700">{title}</span>
     </div>
   </div>
+  {:else}
+  <div style="background-image: url({imageUrl})" class="themeContainer">
+    <div id="innerContainer">
+      <span class="w700">{title}</span>
+    </div>
+  </div>
+  {/if}
 </Link>
 
 <style>
-  #backgroundContainer {
+  .themeContainer {
     background-position: center;
     background-size: cover;
     margin-top: 2vh;
-    margin-left: 0.6vw;
-    margin-right: 0.6vw;
+    margin-right: 1vw;
     border-radius: 1vh;
-    width: 29vw;
+    width: 30vw;
     height: 10vw;
   }
 

@@ -84,10 +84,8 @@ small {
   justify-content: center;
   background-color: #fff;
   margin-top: 2vh;
-  margin-left: 0.6vw;
-  margin-right: 0.6vw;
   border-radius: 1vh;
-  width: 29vw;
+  width: calc(30vw - 2px);
   height: 10vw;
   border: 1px solid #bdbdbd;
 }
