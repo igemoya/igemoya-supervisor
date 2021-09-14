@@ -9,7 +9,7 @@
 
   const loginWithKakao = () => {
     Kakao.Auth.authorize({
-      redirectUri: 'https://igemoya-supervisor.herokuapp.com/oauth'
+      redirectUri: 'https://igemoya.coupy.dev/oauth'
     });
   };
 </script>
