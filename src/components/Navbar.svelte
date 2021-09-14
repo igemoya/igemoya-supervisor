@@ -27,7 +27,7 @@
   <div id="left" class="spliter">
     {#if previousUrl}
       <Link to={previousUrl} id="prevButton">
-        <img src="icons/back_arrow.svg" id="leftArrow" alt="<">&nbsp;{previousMenu}
+        <img src="icons/back_arrow.svg" id="leftArrow" alt="<">{previousMenu}
       </Link>
     {/if}
   </div>
@@ -37,7 +37,7 @@
   </div>
   <div id="right" class="spliter">
     <span class="clickable" on:click={openProfile}>
-      {userName}&nbsp;<img src="icons/expand_arrow.svg" id="expandArrow" class="closed" alt="v">
+      {userName}<img src="icons/expand_arrow.svg" id="expandArrow" class="closed" alt="v">
     </span>
   </div>
 </div>
