@@ -6,6 +6,7 @@
 	import { Router, Route, navigate } from "svelte-routing";
   import Index from "./routes/Index.svelte";
   import Home from "./routes/supervisor/Index.svelte";
+  import Exhibition from "./routes/supervisor/Exhibition.svelte";
   import Auth from "./routes/oauth/Index.svelte";
   import Logout from "./routes/oauth/Logout.svelte";
   import NotFound from "./routes/404.svelte";
@@ -23,6 +24,7 @@
     <Route path="/"><Index /></Route>
     <!-- /supervisor -->
     <Route path="/supervisor"><Home /></Route>
+    <Route path="/supervisor/exhibition"><Exhibition /></Route>
     <!-- /oauth -->
     <Route path="/oauth"><Auth /></Route>
     <Route path="/oauth/logout"><Logout /></Route>

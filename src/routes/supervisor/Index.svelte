@@ -12,8 +12,6 @@
   import ExhibitionElement from "../../components/ExhibitionElement.svelte";
   import axios from "axios";
 
-  let previousMenu = "";
-  let previousUrl = "";
   let userName = "";
   let viewRanks = [
     {"exhibition": "경복궁", "item": "광화문", "object": "현판", "view": 382},
@@ -50,7 +48,7 @@
 </script>
 
 <main>
-  <Navbar {previousMenu} {previousUrl} {userName} />
+  <Navbar previousMenu="" previousUrl="" {userName} />
   <div id="topContainer" class="containers">
     <div class="topContainerSpliter">
       <div id="topContainerTitleRow">
